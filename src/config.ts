@@ -222,6 +222,7 @@ const notifications = {
       ryzen5900: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN5900),
       ryzen5950: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RYZEN5950),
       sf: envOrArray(process.env.DISCORD_NOTIFY_GROUP_CORSAIR_SF),
+      pokemon: envOrArray(process.env.DISCORD_NOTIFY_GROUP_POKEMON),
       sonyps5c: envOrArray(process.env.DISCORD_NOTIFY_GROUP_SONYPS5C),
       sonyps5de: envOrArray(process.env.DISCORD_NOTIFY_GROUP_SONYPS5DE),
       'test:series': envOrArray(process.env.DISCORD_NOTIFY_GROUP_TEST),
@@ -386,6 +387,7 @@ const store = {
       ryzen5900: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5900),
       ryzen5950: envOrNumber(process.env.MAX_PRICE_SERIES_RYZEN5950),
       sf: envOrNumber(process.env.MAX_PRICE_SERIES_CORSAIR_SF),
+      pokemon: envOrNumber(process.env.MAX_PRICE_SERIES_POKEMON),
       sonyps5c: envOrNumber(process.env.MAX_PRICE_SERIES_SONYPS5C),
       sonyps5de: envOrNumber(process.env.MAX_PRICE_SERIES_SONYPS5DE),
       'test:series': envOrNumber(process.env.MAX_PRICE_SERIES_TEST),
@@ -403,24 +405,9 @@ const store = {
     };
   }),
   showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, [
-    '3060ti',
-    '3070',
-    '3080',
-    '3090',
-    'rx6800',
-    'rx6800xt',
-    'rx6900xt',
-    'ryzen5600',
-    'ryzen5800',
-    'ryzen5900',
-    'ryzen5950',
-    'sf',
-    'sonyps5c',
-    'sonyps5de',
-    'xboxss',
-    'xboxsx',
+    'pokemon',
   ]),
-  stores: envOrArray(process.env.STORES, ['amazon', 'bestbuy']).map(entry => {
+  stores: envOrArray(process.env.STORES, ['jimbocards']).map(entry => {
     const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 
     let proxyList = loadProxyList(name);

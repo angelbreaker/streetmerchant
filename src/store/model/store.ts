@@ -27,6 +27,7 @@ export type Brand =
   | 'leadtek'
   | 'microsoft'
   | 'msi'
+  | 'nintendo'
   | 'nvidia'
   | 'palit'
   | 'pny'
@@ -55,7 +56,8 @@ export type Series =
   | 'sonyps5de'
   | 'sf'
   | 'xboxsx'
-  | 'xboxss';
+  | 'xboxss'
+  | 'pokemon';
 
 export type Model =
   | 'test:model'
@@ -128,6 +130,7 @@ export type Model =
   | 'phoenix gs'
   | 'phoenix'
   | 'ps5 console'
+  | 'sword & shield 4.5'
   | 'ps5 digital'
   | 'pulse'
   | 'red devil'

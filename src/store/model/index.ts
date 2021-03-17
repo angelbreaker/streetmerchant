@@ -141,6 +141,7 @@ import {Wipoid} from './wipoid';
 import {Xbox} from './xbox';
 import {Zotac} from './zotac';
 import {logger} from '../../logger';
+import {JimboCards} from "./jimbocards";
 
 export const storeList = new Map([
   [AComPC.name, AComPC],
@@ -219,6 +220,7 @@ export const storeList = new Map([
   [HarrisTechnology.name, HarrisTechnology],
   [HarveyNormanIE.name, HarveyNormanIE],
   [Igamecomputer.name, Igamecomputer],
+  [JimboCards.name, JimboCards],
   [JohnLewis.name, JohnLewis],
   [Kabum.name, Kabum],
   [KomplettNO.name, KomplettNO],
